@@ -1,4 +1,4 @@
-CC = gcc -lm
+CC = gcc -lm -Wall
 
 all: kaprekarDemo kaprekarTest
 
