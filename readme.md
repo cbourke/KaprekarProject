@@ -34,10 +34,6 @@ which produces an executable, `kaprekarTestCmocka`.  This will only work if you 
 
 Only after you have corrected all of the problems (both syntax errors as well as logic errors) will everything compile and the test suite reach 100%
 
-#### Formal Unit Testing with cmocka
-
-A second version has been provided in `c_cmocka` that uses a formal unit testing framework called cmocka (https://cmocka.org/).
-
 ### Java Version
 
 Code for the Java version is in `src` directory.  However, the project is setup as an Eclipse project so you should clone the repo via Eclipse if you want the build to work.
