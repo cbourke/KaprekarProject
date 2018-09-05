@@ -1,1 +1,9 @@
 /bin/
+
+# do not commit object files
+*.o
+
+# nor executables
+kaprekarDemo
+kaprekarTest
+kaprekarTestCmocka
