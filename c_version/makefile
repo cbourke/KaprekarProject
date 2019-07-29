@@ -5,16 +5,16 @@ INCLUDES = -lm
 all: kaprekarDemo kaprekarTest kaprekarTestCmocka
 
 kaprekarDemo: kaprekarUtils.o kaprekarDemo.c
-	$(CC) $(FLAGS) $(INCLUDES) kaprekarDemo.c kaprekarUtils.o -o kaprekarDemo
+	$(CC) $(FLAGS) kaprekarDemo.c kaprekarUtils.o $(INCLUDES) -o kaprekarDemo
 
 kaprekarTest: kaprekarUtils.o kaprekarTest.c
-	$(CC) $(FLAGS) $(INCLUDES) kaprekarTest.c kaprekarUtils.o -o kaprekarTest
+	$(CC) $(FLAGS) kaprekarTest.c kaprekarUtils.o $(INCLUDES) -o kaprekarTest
 
 kaprekarTestCmocka: kaprekarUtils.o kaprekarTestCmocka.c
-	$(CC) $(FLAGS) $(INCLUDES) -l cmocka kaprekarTestCmocka.c kaprekarUtils.o -o kaprekarTestCmocka
+	$(CC) $(FLAGS) -l cmocka kaprekarTestCmocka.c kaprekarUtils.o $(INCLUDES) -o kaprekarTestCmocka
 
 kaprekarUtils.o: kaprekarUtils.c kaprekarUtils.h
-	$(CC) $(FLAGS) $(INCLUDES) -c -o kaprekarUtils.o kaprekarUtils.c
+	$(CC) $(FLAGS) -c kaprekarUtils.c $(INCLUDES) -o kaprekarUtils.o 
 
 clean:
 	rm -f *.o *~ kaprekarDemo kaprekarTest kaprekarTestCmocka
