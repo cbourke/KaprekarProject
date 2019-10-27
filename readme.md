@@ -1,9 +1,9 @@
 
 ## Computer Science I - GitHub Assignment
 
-This repo contains code and tests for a simple GitHub assignment in used in Computer Science I at the University of Nebraska-Lincoln.  It contains code to compute whether or not a given integer is a Kaprekar number.  It contains both Java and C versions.  Both versions contain both ad-hoc testing suites as well as examples of formal testing frameworks (junit and cmocka respectively).
+The repo contains code and tests for simple GitHub assignment in used in Computer Science I at the University of Nebraska-Lincoln.  It contains code to compute whether or not a given integer is a Kaprekar number.  It contains both Java and C versions.  Both versions contain both ad-hoc testing suites as well as examples of formal testing frameworks (junit and cmocka respectively).
 
-Both versions contain intentional syntax errors and bugs that will fail a number of test cases.  The assignment is to fix these errors, commit and document each change and to push it to your own repository.
+All versions contain intentional syntax errors,bugs that will fail a number of test cases.  The assignment is to fix these errors, commit and document each change and to push it to your own repository.
 
 When working with GitHub, you should *fork* the project first to your own GitHub profile.  *Then* clone *your* repository to your local machine, make and commit changes, then push them to your repository.
 
