@@ -1,6 +1,7 @@
-CC = gcc 
+CC = gcc
 FLAGS = -Wall -g
 INCLUDES = -lm
+CMOCKA = -l cmocka
 
 all: kaprekarDemo kaprekarTest kaprekarTestCmocka
 
@@ -11,10 +12,10 @@ kaprekarTest: kaprekarUtils.o kaprekarTest.c
 	$(CC) $(FLAGS) kaprekarTest.c kaprekarUtils.o $(INCLUDES) -o kaprekarTest
 
 kaprekarTestCmocka: kaprekarUtils.o kaprekarTestCmocka.c
-	$(CC) $(FLAGS) -l cmocka kaprekarTestCmocka.c kaprekarUtils.o $(INCLUDES) -o kaprekarTestCmocka
+	$(CC) $(FLAGS) kaprekarTestCmocka.c kaprekarUtils.o $(INCLUDES) -o kaprekarTestCmocka $(CMOCKA)
 
 kaprekarUtils.o: kaprekarUtils.c kaprekarUtils.h
-	$(CC) $(FLAGS) -c kaprekarUtils.c $(INCLUDES) -o kaprekarUtils.o 
+	$(CC) $(FLAGS) -c kaprekarUtils.c $(INCLUDES) -o kaprekarUtils.o
 
 clean:
 	rm -f *.o *~ kaprekarDemo kaprekarTest kaprekarTestCmocka
